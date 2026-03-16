@@ -1,0 +1,18 @@
+{
+  "name": "rideagent-full",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=apps/rider-agent\" \"npm run dev --workspace=apps/driver-agent\"",
+    "build": "npm run build --workspace=packages/shared && npm run build --workspaces --if-present",
+    "rider": "npm run dev --workspace=apps/rider-agent",
+    "driver": "npm run dev --workspace=apps/driver-agent"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@rideagent/shared",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "ethers": "^6.13.0"
+  }
+}
